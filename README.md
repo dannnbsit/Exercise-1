@@ -1,2 +1,1 @@
-exercise 1
-test
+Exercise 1
