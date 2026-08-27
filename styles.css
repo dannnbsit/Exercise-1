@@ -6,6 +6,10 @@
 
 }
 
+/* body {
+    font-size: clamp(1rem, 1vw, 1rem);
+} */
+
 
 .header {
     background-color: antiquewhite;
@@ -21,8 +25,13 @@ img.logo {
     width: 70px;
     height: 45px;
     border-radius: 200%;
-    box-shadow: 0 1px 5px 0 black;
+    box-shadow: 0 1px 3px 0 black;
     cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 2px 5px 0 black;
+        transition: all ease 1s;
+    }
 }
 
 
@@ -31,7 +40,7 @@ h1.title {
 }
 
 
-.teamProfile {
+/* .teamProfile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +49,15 @@ h1.title {
     width: 100%;
     height: 90vh;
     padding: 10px;
+} */
+
+.teamProfile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: darkgray;
+    width: 100%;
+    height: 210vh;
+    /* padding: 50px; */
 }
 
 
@@ -47,13 +65,16 @@ h1.title {
 .profile {
     background-color: antiquewhite;
     border: 3px solid black;
-    width: 15%;
-    height: 50vh;
+    width: 80%;
+    max-width: 500px;
+    height: 60vh;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 30px auto;
 }
 
 
@@ -64,24 +85,28 @@ h1.title {
 }
 
 
-/* example lang yan */
 img {
-    width: 120px;
     width: 120px;
     border-radius: 5%;
     margin: 20px;
+    box-shadow: 0 1px 5px 0 black;
 }
 
 
 h2 {
     font-size: 15px;
-    margin: 10px;
+    padding: 10px;
     text-align: center;
 }
 
-
 p {
-    padding-top: 15px;
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 5vh;
 }
 
 
@@ -98,6 +123,35 @@ p {
         font-size: 1.8rem;
     }
 
+    .teamProfile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* background-color: darkgray; */
+        background-color: green;
+        width: 100%;
+        height: 350vh;
+        /* padding: 10px; */
+    }
+
+    
+    .profile {
+        background-color: antiquewhite;
+        border: 3px solid black;
+        width: 100%;
+        max-width: 350px;
+        margin: 30px auto;
+        height: 75vh;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 
@@ -110,15 +164,76 @@ p {
         font-size: 1.3rem;
     }
 
+    .teamProfile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* background-color: darkgray; */
+        background-color: red;
+        width: 100%;
+        height: 600vh;
+        padding: 10px;
+    }
+
+    .profile {
+        background-color: antiquewhite;
+        border: 3px solid black;
+        width: 100%;
+        max-width: 350px;
+        margin: 30px auto;
+        height: 70vh;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 
 /* Mobile */
 @media screen and (max-width: 320px) and (max-width: 480px) {
     
+    body {
+        height: 300vh;
+    }
 
     h1.title {
         font-size: 0.8rem;
+    }
+
+    .teamProfile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 0;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* background-color: darkgray; */
+        background-color: blue;
+        width: 100%;
+        height: 530vh;
+        padding: 10px;
+    }
+
+    .profile {
+        background-color: antiquewhite;
+        border: 3px solid black;
+        width: 100%;
+        max-width: 250px;
+        margin: 30px auto;
+        height: 65vh;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
 }
